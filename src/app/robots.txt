@@ -1,0 +1,107 @@
+# robots.txt for AniArix
+# https://aniarix.site
+#
+# AniArix is an anime discovery and streaming platform.
+# Please respect the following crawling rules.
+#
+# Public pages may be indexed.
+# Streaming pages, API endpoints, and internal resources should not be crawled.
+
+# =========================================================
+# Default Rules
+# =========================================================
+
+User-agent: *
+Allow: /
+
+# Block API
+Disallow: /api/
+
+# Block streaming pages
+Disallow: /watch/
+
+# Block internal search parameters
+Disallow: /search?*
+
+# Block filtered URLs
+Disallow: /*?genre=*
+Disallow: /*?sort=*
+Disallow: /*?page=*
+Disallow: /*?status=*
+Disallow: /*?season=*
+Disallow: /*?year=*
+
+# Allow public pages
+Allow: /anime/
+Allow: /search
+Allow: /home
+Allow: /about
+Allow: /trending
+
+# ==========================================================
+# AI Crawlers
+# ==========================================================
+
+User-agent: GPTBot
+Allow: /
+Disallow: /watch/
+Disallow: /api/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /watch/
+Disallow: /api/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /watch/
+Disallow: /api/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /watch/
+Disallow: /api/
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /watch/
+Disallow: /api/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /watch/
+Disallow: /api/
+
+User-agent: CCBot
+Allow: /
+Disallow: /watch/
+Disallow: /api/
+
+User-agent: cohere-ai
+Allow: /
+Disallow: /watch/
+Disallow: /api/
+
+User-agent: Bytespider
+Allow: /
+Disallow: /watch/
+Disallow: /api/
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+# ==========================================================
+# AI Content Signal
+# ==========================================================
+
+User-agent: *
+Content-Signal: search=yes,ai-train=no,use=reference
+
+# ==========================================================
+# Sitemap
+# ==========================================================
+
+Sitemap: https://www.aniarix.site/sitemap.xml
